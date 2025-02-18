@@ -18,7 +18,7 @@ body {
     padding-top: 80px;
 }
 
-/* Navbar */
+/* NAVBAR START */
 header {
     background: blue;
     padding: 15px 0;
@@ -29,40 +29,12 @@ header {
     z-index: 1000;
 }
 
-/* Navbar tetap di atas */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: blue;
-    padding: 15px 0;
-    z-index: 1000;
-}
-
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
     margin: auto;
-}
-
-.nav-links a.active {
-    color: #FFD700; /* Warna emas saat aktif */
-    font-weight: bold;
-    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.7);
-    transition: all 0.3s ease-in-out;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 80px;  /* Sesuaikan ukuran logo */
-    height: 60px; /* Sesuaikan ukuran logo */
-    margin-right: 10px;
 }
 
 .nav-links {
@@ -88,7 +60,26 @@ nav {
     border-radius: 5px; /* Membuat sudut sedikit melengkung */
 }
 
-/* Hero Section */
+.nav-links a.active {
+    color: #FFD700; /* Warna emas saat aktif */
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;  /* Sesuaikan ukuran logo */
+    height: 60px; /* Sesuaikan ukuran logo */
+    margin-right: 10px;
+}
+/* NAVBAR END */
+
+/* HERO START */
 .hero {
     text-align: center;
     background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0.7)), 
@@ -101,7 +92,6 @@ nav {
     align-items: center;
 }
 
-/* Styling untuk teks utama */
 .hero h1 {
     font-size: 38px;
     font-weight: bold;
@@ -109,7 +99,6 @@ nav {
     margin-bottom: 10px; /* Menambah jarak dengan <p> */
 }
 
-/* Warna khusus untuk kata PRIVATE.COM */
 .hero h1 span {
     color:blue;
     text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
