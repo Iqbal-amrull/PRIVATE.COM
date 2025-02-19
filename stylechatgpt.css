@@ -482,6 +482,8 @@ footer {
     color: white;
 }
 
+/* HANDPHONE SECTION START */
+
 /* Responsiveness Fix for Mobile Devices */
 @media (max-width: 768px) {
     nav {
@@ -525,14 +527,18 @@ footer {
     }
 
     .hero {
-        padding-top: 100px; /* Tambahkan ruang agar tidak tertutup navbar */
-        min-height: 90vh; /* Meningkatkan tinggi hero agar teks tidak tertutup */
+        padding-top: 50px; /* Tambahkan ruang agar tidak tertutup navbar */
+        min-height: 70vh; /* Meningkatkan tinggi hero agar teks tidak tertutup */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
     }
+
+    .hero h1, .hero p {
+        margin-top: 0; /* Pastikan tidak ada jarak ekstra di atas teks */
+    }    
 
     .hero h1 {
         font-size: 28px;
@@ -557,7 +563,26 @@ footer {
         align-items: center;
         padding-top: 20px;
     }
-    .about-text, .about-image {
+
+    .about-text {
+    flex: 1;
+    max-width: 90%;
+    text-align: justify;
+    padding: 20px; /* Reduce padding */
+    margin-left: 0px; /* Remove extra left margin */
+    margin-right: auto; /* Push text to the left */
+    margin-top: -10px;
+    line-height: 1,5;
+    letter-spacing: 0.5px;
+    }
+
+    .about-text h2 {
+        padding-left: 0px;
+        margin-top: -40px;
+        text-align: left;
+        font-size: 20px;
+    }
+    .about-image {
         max-width: 90%;
         text-align: center;
     }
@@ -584,3 +609,5 @@ footer {
         margin-top: 5px;
     }
 }
+
+/* HANDPHONE SECTION END */
