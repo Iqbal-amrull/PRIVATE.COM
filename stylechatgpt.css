@@ -485,20 +485,34 @@ footer {
 /* Responsiveness Fix for Mobile Devices */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
+        padding: 10px 20px;
+        flex-wrap: wrap;
     }
     .nav-links {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        width: 100%;
+        gap: 10px;
+        padding: 0;
+        flex-wrap: wrap;
     }
     .nav-links li {
-        margin: 10px 0;
+        margin: 0;
+        display: inline-block;
+    }
+    .nav-links a {
+        font-size: 14px;
+        padding: 6px 10px;
+        white-space: nowrap;
     }
     .hero {
-        padding: 20px;
-        min-height: 80vh; /* Meningkatkan tinggi hero agar teks terlihat */
+        padding: 50px 20px 20px; /* Memberikan lebih banyak ruang ke atas */
+        min-height: 85vh; /* Meningkatkan tinggi hero agar teks tidak tertutup */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -506,7 +520,7 @@ footer {
         text-align: center;
     }
     .hero h1 {
-        font-size: 26px;
+        font-size: 28px;
         margin-top: 0;
     }
     .hero p {
@@ -534,11 +548,11 @@ footer {
     }
     .about-section {
         padding: 40px 20px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     .instagram-section {
-        margin-top: 20px; /* Mengurangi jarak antara About Us dan Instagram */
-        padding: 30px 20px;
+        margin-top: 10px; /* Mengurangi jarak antara About Us dan Instagram */
+        padding: 20px 20px;
     }
     .program-container {
         flex-direction: column;
@@ -552,6 +566,6 @@ footer {
         align-items: center;
     }
     .instagram-section h2 {
-        margin-top: 10px;
+        margin-top: 5px;
     }
 }
