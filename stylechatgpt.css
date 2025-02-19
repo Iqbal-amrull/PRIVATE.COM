@@ -498,27 +498,41 @@ footer {
     }
     .hero {
         padding: 20px;
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .hero h1 {
-        font-size: 28px;
+        font-size: 24px;
+        margin-top: 20px;
     }
     .hero p {
-        font-size: 18px;
+        font-size: 16px;
+        margin-top: 10px;
     }
     .hero .btn {
-        font-size: 20px;
-        padding: 10px 20px;
+        font-size: 18px;
+        padding: 8px 16px;
     }
     .hero-image img {
-        max-width: 90%;
+        max-width: 80%;
+        margin-top: 10px;
     }
     .about-container {
         flex-direction: column;
         align-items: center;
+        padding-top: 40px;
     }
     .about-text, .about-image {
         max-width: 90%;
         text-align: center;
+    }
+    .about-section {
+        padding: 50px 20px;
+    }
+    .instagram-section {
+        margin-top: 50px;
     }
     .program-container {
         flex-direction: column;
@@ -530,5 +544,8 @@ footer {
     .wa-container, .ig-container {
         flex-direction: column;
         align-items: center;
+    }
+    .instagram-section h2 {
+        margin-top: 20px;
     }
 }
