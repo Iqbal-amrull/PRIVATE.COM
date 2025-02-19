@@ -486,20 +486,19 @@ footer {
 @media (max-width: 768px) {
     nav {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap; /* Pastikan navbar tidak turun */
     }
     .nav-links {
-        display: flex;
-        flex-direction: row;
+        display: flex !important;
+        flex-direction: row !important; /* Pastikan menu tetap horizontal */
         justify-content: center;
         align-items: center;
         gap: 10px;
         padding: 0;
-        flex-wrap: wrap;
+        flex-wrap: nowrap; /* Pastikan tidak pindah ke bawah */
     }
     .nav-links li {
         margin: 0;
@@ -510,15 +509,19 @@ footer {
         padding: 6px 10px;
         white-space: nowrap;
     }
+}
+
+@media (max-width: 768px) {
     .hero {
-        padding: 50px 20px 20px; /* Memberikan lebih banyak ruang ke atas */
-        min-height: 85vh; /* Meningkatkan tinggi hero agar teks tidak tertutup */
+        padding-top: 100px; /* Tambahkan ruang agar tidak tertutup navbar */
+        min-height: 90vh; /* Meningkatkan tinggi hero agar teks tidak tertutup */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
     }
+}
     .hero h1 {
         font-size: 28px;
         margin-top: 0;
@@ -568,4 +571,3 @@ footer {
     .instagram-section h2 {
         margin-top: 5px;
     }
-}
