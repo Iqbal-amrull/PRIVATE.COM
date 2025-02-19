@@ -488,30 +488,42 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 20px;
+        padding: 10px 15px;
         flex-wrap: nowrap; /* Pastikan navbar tidak turun */
+        width: 100%;
     }
+
+    .logo img {
+        width: 50px !important; /* Perkecil ukuran logo */
+        height: auto !important; /* Jaga aspek rasio */
+        margin-left: 5px !important; /* Geser logo sedikit ke kiri */
+    }
+
     .nav-links {
         display: flex !important;
         flex-direction: row !important; /* Pastikan menu tetap horizontal */
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 5px;
         padding: 0;
         flex-wrap: nowrap; /* Pastikan tidak pindah ke bawah */
+        white-space: nowrap; /* Mencegah teks menu terpotong */
+        overflow-x: auto; /* Tambahkan scrolling horizontal jika perlu */
     }
     .nav-links li {
-        margin: 0;
+        margin: 0 3px;
         display: inline-block;
     }
-    .nav-links a {
-        font-size: 14px;
-        padding: 6px 10px;
-        white-space: nowrap;
-    }
-}
 
-@media (max-width: 768px) {
+    .nav-links li:last-child {
+        margin-right: 0; /* Pastikan Contact Us tidak keluar layar */
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
     .hero {
         padding-top: 100px; /* Tambahkan ruang agar tidak tertutup navbar */
         min-height: 90vh; /* Meningkatkan tinggi hero agar teks tidak tertutup */
@@ -521,7 +533,7 @@ footer {
         align-items: center;
         text-align: center;
     }
-}
+
     .hero h1 {
         font-size: 28px;
         margin-top: 0;
@@ -571,3 +583,4 @@ footer {
     .instagram-section h2 {
         margin-top: 5px;
     }
+}
