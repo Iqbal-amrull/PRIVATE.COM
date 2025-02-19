@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +19,7 @@ body {
     color: #333;
     padding-top: 80px;
 }
+
 
 /* NAVBAR START */
 header {
@@ -77,6 +80,7 @@ nav {
     height: 60px; /* Sesuaikan ukuran logo */
     margin-right: 10px;
 }
+
 /* NAVBAR END */
 
 /* HERO START */
@@ -109,8 +113,6 @@ nav {
     text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
     font-weight: bold;
 }
-/* Impor font dari Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 .hero p {
     font-size: 26px;
@@ -228,9 +230,14 @@ nav {
 /* Tambahkan ikon centang */
 .about-text ul li::before {
     content: "✔";
-    color: #0056b3; /* Warna emas untuk ikon */
+    color: blue; /* Warna emas untuk ikon */
     position: absolute;
     left: 0;
+}
+
+.about-keunggulan {
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .about-text p span {
@@ -238,6 +245,7 @@ nav {
     color:white;
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
 }
+
 .about-image {
     flex: 1;
     max-width: 400px;
@@ -262,6 +270,7 @@ nav {
 .instagram-section h2 {
     margin-top: -70px;
     color: blue;
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8);
 }
 
 .ig-desc {
@@ -320,7 +329,7 @@ scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
 .program-section h2 {
     font-size: 32px;
     color: blue; /* Warna biru */
-    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8); ;
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8);
     margin-top: -20px;
     margin-bottom: 5px;
 }
@@ -373,8 +382,23 @@ scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
 }
 
 .program-card ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0; /* Align to the left */
     text-align: left;
-    padding-left: 20px; /* Memberi ruang agar tidak terlalu mepet */
+}
+
+.program-card ul li {
+    position: relative;
+    padding-left: 25px; /* Space for checkmark */
+    text-align: left;
+}
+
+.program-card ul li::before {
+    content: "✔"; /* Checkmark symbol */
+    color: #0056b3; /* Adjust color */
+    position: absolute;
+    left: 0;
+    font-weight: bold;
 }
 
 /* Responsif untuk layar kecil */
@@ -398,7 +422,7 @@ scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
 
 .wa-section h2 {
     color: blue;
-    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8);
 }
 
 .wa-desc {
@@ -432,7 +456,6 @@ scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
     font-size: 18px;
     font-weight: bold;
     color: blue;
-    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
     margin-top: 20px;
 }
 /* CONTACT END */
@@ -486,6 +509,7 @@ footer {
 
 /* Responsiveness Fix for Mobile Devices */
 @media (max-width: 768px) {
+    /* NAV START */
     nav {
         display: flex;
         justify-content: space-between;
@@ -525,7 +549,9 @@ footer {
         font-size: 12px;
         padding: 5px 8px;
     }
+    /* NAV END */
 
+    /* HERO START */
     .hero {
         padding-top: 50px; /* Tambahkan ruang agar tidak tertutup navbar */
         min-height: 70vh; /* Meningkatkan tinggi hero agar teks tidak tertutup */
@@ -558,6 +584,9 @@ footer {
         max-width: 80%;
         margin-top: 10px;
     }
+    /* HERO END */
+
+    /* ABOUT START */
     .about-container {
         flex-direction: column;
         align-items: center;
@@ -566,7 +595,7 @@ footer {
 
     .about-text {
     flex: 1;
-    max-width: 90%;
+    max-width: 100%;
     text-align: justify;
     padding: 20px; /* Reduce padding */
     margin-left: 0px; /* Remove extra left margin */
@@ -582,6 +611,18 @@ footer {
         text-align: left;
         font-size: 20px;
     }
+
+    .about-keunggulan {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .about-text ul li::before {
+        content: "✔";
+        color: blue; /* Warna emas untuk ikon */
+        position: absolute;
+        left: 0;
+    }
     .about-image {
         max-width: 90%;
         text-align: center;
@@ -590,10 +631,25 @@ footer {
         padding: 40px 20px;
         margin-bottom: 10px;
     }
+    /* ABOUT END */
+
+    /* IG START */
     .instagram-section {
-        margin-top: 10px; /* Mengurangi jarak antara About Us dan Instagram */
+        margin-top: -10px; /* Mengurangi jarak antara About Us dan Instagram */
         padding: 20px 20px;
     }
+
+    .ig-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instagram-section h2 {
+        margin-top: -10px;
+    }
+    /* IG END */
+
+    /* PROGRAM START */
     .program-container {
         flex-direction: column;
         align-items: center;
@@ -601,13 +657,42 @@ footer {
     .program-card {
         max-width: 90%;
     }
-    .wa-container, .ig-container {
+
+    .program-card ul {
+        list-style: none; /* Remove default bullets */
+        padding-left: 0; /* Align to the left */
+        text-align: left;
+    }
+    
+    .program-card ul li {
+        position: relative;
+        padding-left: 25px; /* Space for checkmark */
+        text-align: left;
+    }
+    
+    .program-card ul li::before {
+        content: "✔"; /* Checkmark symbol */
+        color: #0056b3; /* Adjust color */
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+    /* PROGRAM END */
+
+    /* WA START */
+    .wa-section {
+        margin-top: 0px;
+    }
+
+    .wa-container {
         flex-direction: column;
         align-items: center;
     }
-    .instagram-section h2 {
-        margin-top: 5px;
+
+    .wa-section h2 {
+        margin-top: -30px;
     }
+    /* WA END */
 }
 
 /* HANDPHONE SECTION END */
