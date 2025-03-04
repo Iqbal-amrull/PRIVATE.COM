@@ -1,9 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
+    console.log("JavaScript Loaded!"); // Debugging: cek apakah JS berjalan
+
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-links a");
+    const navMenu = document.querySelector(".nav-links");
+    const hamburger = document.getElementById("hamburger");
+
+    if (!navMenu) {
+        console.error("ERROR: nav-menu tidak ditemukan!");
+    }
+    if (!hamburger) {
+        console.error("ERROR: hamburger tidak ditemukan!");
+    }
 
     function changeActiveNav() {
-        let fromTop = window.scrollY + 100; // Tambah offset agar lebih responsif
+        let fromTop = window.scrollY + 100; 
 
         sections.forEach(section => {
             if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
@@ -17,6 +28,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
         });
+    }
+
+    // Fungsi Toggle Menu untuk Hamburger
+    function toggleMenu(event) {
+        event.preventDefault(); // Mencegah kejadian bawaan
+        console.log("Hamburger diklik!"); // Debugging
+        navMenu.classList.toggle("show");
+    }    
+
+    // Pastikan hamburger bisa diklik
+    if (hamburger) {
+        hamburger.addEventListener("click", toggleMenu);
+    } else {
+        console.error("ERROR: Tidak bisa menambahkan event listener ke hamburger!");
     }
 
     window.addEventListener("scroll", changeActiveNav);
