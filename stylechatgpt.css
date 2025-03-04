@@ -89,6 +89,18 @@ nav {
     margin-right: 10px;
 }
 
+.brand-text {
+    font-size: 1.5rem; /* Ukuran font lebih besar */
+    font-weight: bold; /* Membuat teks lebih tegas */
+    letter-spacing: 1px; /* Memberi sedikit spasi antar huruf */
+    text-transform: uppercase; /* Mengubah teks jadi huruf besar semua */
+    color: white; /* Sesuaikan dengan desain yang kamu mau */
+}
+
+.brand-text:hover {
+    color: #FFD700; /* Warna saat di-hover */
+}
+
 /* NAVBAR END */
 
 /* HERO START */
