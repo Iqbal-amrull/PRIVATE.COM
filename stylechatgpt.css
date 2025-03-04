@@ -20,7 +20,6 @@ body {
     padding-top: 80px;
 }
 
-
 /* NAVBAR START */
 header {
     background: blue;
@@ -38,6 +37,7 @@ nav {
     align-items: center;
     width: 80%;
     margin: auto;
+    padding: 15px 0;
 }
 
 .nav-links {
@@ -52,15 +52,15 @@ nav {
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 18px; /* Ubah ukuran font menjadi lebih besar */
-    font-weight: bold; /* Opsional: Membuat teks lebih tebal */
+    font-size: 18px;
+    font-weight: bold;
     padding: 10px 15px;
-    transition: background 0.3s ease-in-out; /* Efek transisi */
+    transition: background 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-    background: rgba(255, 255, 255, 0.3); /* Warna putih transparan */
-    border-radius: 5px; /* Membuat sudut sedikit melengkung */
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
 }
 
 .nav-links a.active {
@@ -68,6 +68,14 @@ nav {
     font-weight: bold;
     text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.7);
     transition: all 0.3s ease-in-out;
+}
+
+/* ====== HAMBURGER MENU (HP & TABLET) ====== */
+.hamburger {
+    display: none; /* Default: tidak tampil di laptop */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
 }
 
 .logo {
@@ -525,20 +533,29 @@ footer {
         margin-left: 5px !important; /* Geser logo sedikit ke kiri */
     }
 
-    .nav-links {
-        display: flex !important;
-        flex-direction: row !important; /* Pastikan menu tetap horizontal */
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-        padding: 0;
-        flex-wrap: nowrap; /* Pastikan tidak pindah ke bawah */
-        white-space: nowrap; /* Mencegah teks menu terpotong */
-        overflow-x: auto; /* Tambahkan scrolling horizontal jika perlu */
+    .hamburger {
+        display: block; /* Tampilkan hamburger di layar kecil */
     }
+
+    .nav-links {
+        display: none; /* Sembunyikan menu awalnya */
+        flex-direction: column;
+        position: absolute;
+        background: blue;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-links.show {
+        display: flex !important; /* Tampilkan menu saat tombol hamburger diklik */
+        flex-direction: column !important;
+    }
+
     .nav-links li {
-        margin: 0 3px;
-        display: inline-block;
+        padding: 10px;
     }
 
     .nav-links li:last-child {
