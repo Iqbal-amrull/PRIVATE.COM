@@ -23,7 +23,7 @@ body {
 /* NAVBAR START */
 header {
     background: blue;
-    padding: 15px 0;
+    padding: 5px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -47,6 +47,7 @@ nav {
 
 .nav-links li {
     margin: 0 15px;
+    margin-top: 10px;
 }
 
 .nav-links a {
@@ -84,9 +85,10 @@ nav {
 }
 
 .logo img {
-    width: 80px;  /* Sesuaikan ukuran logo */
-    height: 60px; /* Sesuaikan ukuran logo */
+    width: 60px;  /* Sesuaikan ukuran logo */
+    height: 50px; /* Sesuaikan ukuran logo */
     margin-right: 10px;
+    margin-top: -10px;
 }
 
 .brand-text {
@@ -104,12 +106,15 @@ nav {
 /* NAVBAR END */
 
 /* HERO START */
+#beranda {
+    scroll-margin-top: 100px; /* Atur sesuai tinggi navbar */
+}
 .hero {
     text-align: center;
     background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0.7)), 
                 url('fun-learning.jpg') center/cover no-repeat;
     color: white;
-    padding: 40px 0px;
+    padding: 60px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,7 +175,7 @@ nav {
 /* Mengatur gambar di bawah tombol */
 .hero-image {
     margin-top: 20px; /* Jarak dari tombol */
-    margin-bottom: -45px;
+    margin-bottom: -60px;
 }
 
 .hero-image img {
@@ -226,7 +231,7 @@ nav {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 10px;
-    margin-top: -80px;
+    margin-top: 0px;
     color:blue;
     text-align: left; /* Agar tetap ke kiri */
     text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
@@ -420,13 +425,6 @@ scroll-margin-top: 80px; /* Atur sesuai tinggi navbar */
     left: 0;
     font-weight: bold;
 }
-
-/* Responsif untuk layar kecil */
-@media (max-width: 768px) {
-    .program-card {
-        max-width: 100%;
-    }
-}
 /* PROGRAM END */
 
 /* CONTACT START */
@@ -534,7 +532,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 15px;
+        padding: 15px 15px;
         flex-wrap: nowrap; /* Pastikan navbar tidak turun */
         width: 100%;
     }
@@ -582,7 +580,7 @@ footer {
 
     /* HERO START */
     .hero {
-        padding-top: 50px; /* Tambahkan ruang agar tidak tertutup navbar */
+        padding-top: 40px; /* Tambahkan ruang agar tidak tertutup navbar */
         min-height: 70vh; /* Meningkatkan tinggi hero agar teks tidak tertutup */
         display: flex;
         flex-direction: column;
@@ -612,6 +610,7 @@ footer {
     .hero-image img {
         max-width: 80%;
         margin-top: 10px;
+        margin-bottom: 0px ;
     }
     /* HERO END */
 
@@ -679,12 +678,13 @@ footer {
     /* IG END */
 
     /* PROGRAM START */
+    .program-card {
+        max-width: 90%;
+    }
+
     .program-container {
         flex-direction: column;
         align-items: center;
-    }
-    .program-card {
-        max-width: 90%;
     }
 
     .program-card ul {
